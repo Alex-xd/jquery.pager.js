@@ -109,7 +109,7 @@
 
 
     $.fn.pager = function (options) {
-        options = $.extend(defaults, options || {});
+        options = $.extend({}, defaults, options);
 
         return new Pager($(this), options);
     }
