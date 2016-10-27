@@ -19,7 +19,7 @@
 
     function Pager($ele, options) {
         this.$ele = $ele;
-        this.options = options = $.extend(defaults, options || {});
+        this.options = options = $.extend({},defaults, options || {});
         this.init();
     }
     Pager.prototype = {
@@ -109,8 +109,6 @@
 
 
     $.fn.pager = function (options) {
-        options = $.extend(defaults, options || {});
-
         return new Pager($(this), options);
     }
 
